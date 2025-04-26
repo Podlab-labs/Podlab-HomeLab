@@ -1,0 +1,10 @@
+---
+services:
+    go-socks5-proxy:
+        image: serjs/go-socks5-proxy
+        environment:
+            - PROXY_PASSWORD=<PROXY_PASSWORD> # remove for no user
+            - PROXY_USER=<PROXY_USER>  # remove for no password
+        ports:
+            - '1080:1080'
+        container_name: socks5

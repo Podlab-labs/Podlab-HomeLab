@@ -1,0 +1,28 @@
+##### Flaresolverr
+
+## Install
+
+##### docker-compose.yml
+
+```markdown
+---
+services:
+  flaresolverr:
+    # DockerHub mirror flaresolverr/flaresolverr:latest
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - LOG_HTML=${LOG_HTML:-false}
+      - CAPTCHA_SOLVER=${CAPTCHA_SOLVER:-none}
+      - TZ=Australia/Sydney
+    ports:
+      - "${PORT:-8191}:8191"
+    networks:
+      - media
+    restart: unless-stopped
+
+networks:
+  media:
+    external: true
+```

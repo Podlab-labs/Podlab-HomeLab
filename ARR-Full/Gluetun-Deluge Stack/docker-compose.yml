@@ -1,0 +1,41 @@
+---
+services:
+  gluetun:
+    image: qmcgaw/gluetun
+    container_name: gluetun
+    # line above must be uncommented to allow external containers to connect.
+    # See https://github.com/qdm12/gluetun-wiki/blob/main/setup/connect-a-container-to-gluetun.md#external-container-to-gluetun
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    ports:
+      - 6881:6881 # deluge
+      - 6881:6881/udp
+      - 8112:8112 # deluge
+    volumes:
+      - /path/to/docker/arr-stack:/gluetun
+    environment:
+      - VPN_SERVICE_PROVIDER=nordvpn
+      - VPN_TYPE=openvpn # wireguard if used
+      - OPENVPN_USER=username_goes_here # Nord Username
+      - OPENVPN_PASSWORD=password_goes_here # Nord Password
+      #- WIREGUARD_PRIVATE_KEY= #supplied by NordVPN in your account
+      - SERVER_COUNTRIES=United States 
+    restart: always
+
+  deluge:
+    image: lscr.io/linuxserver/deluge:latest
+    container_name: deluge
+    network_mode: "service:gluetun"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Australia/Sydney
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - /path/to/docker/arr-stack/deluge/config:/config
+      - /mnt/downloads:/downloads # Path to downloads folder
+    depends_on:
+      - gluetun
+    restart: unless-stopped
