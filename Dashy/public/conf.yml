@@ -1,0 +1,418 @@
+appConfig:
+  theme: lissy
+  layout: auto
+  iconSize: small
+  language: en
+pageInfo:
+  title: Podzone
+  description: I Say "Katie is HOT"
+  navLinks:
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+      target: newtab
+    - title: Documentation
+      path: https://dashy.to/docs
+      target: newtab
+  footerText: ''
+sections:
+  - name: Weather
+    widgets:
+      - type: weather
+        options:
+          apiKey: 21d1d945476325b1ba296303be3fe953
+          city: Bowen Mountain, AU
+          units: metric
+          hideDetails: false
+        id: 0_720_weather
+  - name: Clock
+    widgets:
+      - type: clock
+        options:
+          timeZone: Australia/Sydney
+          format: en-GB
+          hideDate: false
+        id: 0_492_clock
+  - name: Public IP
+    widgets:
+      - type: public-ip
+        id: 0_792_publicip
+  - name: Web Sites
+    icon: fas fa-server
+    items:
+      - title: Google
+        description: Search
+        url: https://google.com
+        id: 0_838_google
+      - title: Anti-Pest
+        description: Anti-Pest Solutions
+        url: https://www.antipestsolutions.com.au
+        target: newtab
+        id: 1_838_antipest
+      - title: Service M8
+        description: Service M8
+        url: https://www.servicem8.com/au/
+        target: newtab
+        id: 2_838_servicem
+      - title: Xero
+        description: Xero
+        url: https://go.xero.com/app/!PR3Tn/dashboard
+        target: newtab
+        id: 3_838_xero
+      - title: Torrent
+        description: Torrent
+        url: https://1337x.to/
+        target: newtab
+        id: 4_838_torrent
+      - title: You Tube
+        description: You Tube
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/youtube.png
+        url: https://www.youtube.com/
+        target: newtab
+        id: 5_838_youtube
+      - title: Proxmox Helper Scripts
+        description: Proxmox Helper Scripts
+        url: https://tteck.github.io/Proxmox/
+        target: newtab
+        id: 6_838_proxmoxhelperscripts
+      - title: Docker Install
+        description: Docker
+        url: https://docs.docker.com/engine/install/ubuntu/
+        target: newtab
+        id: 7_838_dockerinstall
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: Networking
+    icon: fas fa-network-wired
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: pfsense
+        description: pfsense
+        icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/pfsense.png
+        url: https://gateway.podlab.tech
+        target: newtab
+        statusCheck: true
+        statusCheckAllowInsecure: true
+        id: 0_1064_pfsense
+      - title: 'Edgerouter 25 '
+        description: Edgerouter 25
+        icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/unifi.png
+        url: https://192.168.1.25
+        target: newtab
+        statusCheck: true
+        statusCheckAllowInsecure: true
+        id: 1_1064_edgerouter
+      - title: Unifi Controller
+        description: Unifi Controller
+        icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/unifi.png
+        url: https://192.168.1.60:8443
+        target: newtab
+        statusCheck: true
+        statusCheckAllowInsecure: true
+        id: 2_1064_unificontroller
+      - title: 'Nginx '
+        description: Nginx Proxy Manager
+        icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/nginx.png
+        url: https://npm.podlab.tech
+        target: newtab
+        statusCheck: true
+        id: 3_1064_nginx
+      - title: Adguard NS1
+        description: Adguard
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/adguard-home.png
+        url: http://ns1.podlab.tech
+        target: newtab
+        statusCheck: true
+        id: 4_1064_adguardns
+      - title: Adguard NS2
+        description: Adguard
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/adguard-home.png
+        url: https://ns2.podlab.tech
+        target: newtab
+        statusCheck: true
+        id: 5_1064_adguardns
+      - title: Edgeswitch 20
+        description: Edgeswitch 20
+        icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/unifi.png
+        url: https://es-20.podlab.tech
+        target: newtab
+        statusCheck: true
+        id: 6_1064_edgeswitch
+  - name: Hypervisors
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Proxmox 2
+        description: Proxmox 2
+        icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/proxmox.png
+        url: https://192.168.1.22:8006
+        target: newtab
+        statusCheck: true
+        statusCheckAllowInsecure: true
+        id: 0_1198_proxmox
+      - title: 'Proxmox Main '
+        description: Proxmox Main
+        icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/proxmox.png
+        url: https://192.168.1.5:8006
+        target: newtab
+        statusCheck: true
+        statusCheckAllowInsecure: true
+        id: 1_1198_proxmoxmain
+    icon: fas fa-server
+  - name: Media
+    icon: fas fa-film
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Plex
+        description: Plex
+        icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/plex.png
+        url: http://plex.podlab.tech
+        target: newtab
+        id: 0_480_plex
+      - title: Jellyfin
+        description: Jellyfin
+        icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/jellyfin.png
+        url: http://jellyfin-01.podlab.tech
+        target: newtab
+        id: 1_480_jellyfin
+      - title: Immich
+        description: Immich Photos
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/immich.png
+        url: https://immich.podlab.tech
+        target: newtab
+        statusCheck: true
+        id: 2_480_immich
+      - title: Tautuilli
+        description: Tautuilli
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/tautulli.png
+        url: http://192.168.1.23:8181
+        target: newtab
+        id: 3_480_tautuilli
+  - name: NAS
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: True NAS Scale
+        description: True NAS Scale
+        icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/truenas.png
+        url: https://192.168.1.7
+        target: newtab
+        id: 0_226_truenasscale
+      - title: NAS Filebrowser
+        description: NAS Filebrowser
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/filebrowser.png
+        url: https://192.168.1.7:9000
+        target: newtab
+        id: 1_226_nasfilebrowser
+      - title: Filebrowser Pi
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/filebrowser.png
+        url: http://192.168.1.23:8051
+        target: newtab
+        id: 2_226_filebrowserpi
+    icon: fas fa-database
+  - name: Containers
+    icon: fas fa-box-open
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Portainer
+        description: Portainer
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/portainer.png
+        url: https://portainer.podlab.tech
+        target: newtab
+        statusCheck: true
+        statusCheckAllowInsecure: true
+        id: 0_1046_portainer
+  - name: Monitoring and Remote Desktop
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Guacamole
+        description: Guacamole
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/guacamole.png
+        url: https://quac-01.podzone.online
+        target: newtab
+        statusCheck: true
+        id: 0_2815_guacamole
+      - title: NtopNg
+        description: NtopNg
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/ntopng.png
+        url: http://192.168.1.50:3410
+        target: newtab
+        id: 1_2815_ntopng
+      - title: Kuma
+        description: Kuma
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/uptime-kuma.png
+        url: http://192.168.1.3:3001
+        target: newtab
+        statusCheck: true
+        id: 2_2815_kuma
+      - title: Cockpit-PI
+        description: Cockpit PI
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/cockpit.png
+        url: https://cockpit-pi.podlab.tech
+        target: newtab
+        id: 3_2815_cockpitpi
+      - title: Beszel
+        url: https://beszel.podlab.tech
+        target: newtab
+        id: 4_2815_beszel
+  - name: House and Files
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Homebox
+        description: Homebox
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/homebox.png
+        url: http://192.168.1.3:3100
+        target: newtab
+        statusCheck: true
+        id: 0_1386_homebox
+      - title: Gitea
+        description: Gitea
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/gitea.png
+        url: https://git.podlab.tech
+        target: newtab
+        id: 1_1386_gitea
+      - title: Memos
+        description: Memos
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/memos.png
+        url: https://memos.podlab.tech
+        target: newtab
+        id: 2_1386_memos
+  - name: Torrents File Downloads
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Deluge
+        description: Deluge
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/deluge.png
+        url: http://192.168.1.23:8112
+        target: newtab
+        id: 0_2252_deluge
+      - title: Prowler Torrent Browser
+        description: Prowler Torrent Browser
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/prowlarr.png
+        url: http://192.168.1.23:9696
+        target: newtab
+        id: 1_2252_prowlertorrentbrowser
+      - title: SABnzdb
+        description: News Downloader
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/sabnzbd.png
+        url: http://192.168.1.23:8080
+        target: newtab
+        id: 2_2252_sabnzdb
+      - title: Geek NZB
+        icon: https://nzbgeek.info/images/logos/nzbgeek.png
+        url: https://nzbgeek.info/
+        target: newtab
+        id: 3_2252_geeknzb
+      - title: Thunder News
+        icon: >-
+          https://www.thundernews.com/wp-content/uploads/2020/09/thundernewslogo2020-Master2@0.6x.png
+        url: https://www.thundernews.com/
+        target: newtab
+        id: 4_2252_thundernews
+      - title: Sonarr
+        description: TV
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/sonarr.png
+        url: http://192.168.1.23:8989
+        target: newtab
+        id: 5_2252_sonarr
+      - title: Radarr
+        description: Movies
+        icon: >-
+          https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/radarr.png
+        url: http://192.168.1.23:7878
+        target: newtab
+        id: 6_2252_radarr
+      - title: TMDb
+        icon: >-
+          https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg
+        url: https://www.themoviedb.org/
+        target: newtab
+        id: 7_2252_tmdb
+      - title: Jellyseerr
+        url: https://jellyseerr.podlab.tech
+        target: newtab
+        statusCheck: true
+        id: 8_2252_jellyseerr
+  - name: Security
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Authentik Podlab
+        url: https://auth.podlab.tech
+        target: newtab
+        statusCheck: true
+        id: 0_856_authentikpodlab
+      - title: Authelia Podlab
+        url: https://authelia.podlab.tech
+        target: newtab
+        statusCheck: true
+        id: 1_856_autheliapodlab
+      - title: Authentik Podzone
+        url: https://authentik.podzone.online
+        target: newtab
+        statusCheck: true
+        id: 2_856_authentikpodzone
