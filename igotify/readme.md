@@ -23,15 +23,15 @@ e.g Labels
 
 ```markdown
 labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.gotify.entrypoints=http"
-      - "traefik.http.routers.gotify.rule=Host(`gotify.podlab.tech`)"
-      - "traefik.http.middlewares.gotify-https-redirect.redirectscheme.scheme=https"
-      - "traefik.http.routers.gotify.middlewares=gotify-https-redirect"
-      - "traefik.http.routers.gotify-secure.entrypoints=https"
-      - "traefik.http.routers.gotify-secure.rule=Host(`gotify.podlab.tech`)"
-      - "traefik.http.routers.gotify-secure.tls=true"
-      - "traefik.http.routers.gotify-secure.service=gotify"
-      - "traefik.http.services.gotify.loadbalancer.server.port=80"
-      - "traefik.docker.network=proxy"
+  - "traefik.enable=true"
+  - "traefik.http.routers.gotify.entrypoints=http"
+  - "traefik.http.routers.gotify.rule=Host(`gotify.podlab.tech`)"
+  - "traefik.http.middlewares.gotify-https-redirect.redirectscheme.scheme=https"
+  - "traefik.http.routers.gotify.middlewares=gotify-https-redirect"
+  - "traefik.http.routers.gotify-secure.entrypoints=https"
+  - "traefik.http.routers.gotify-secure.rule=Host(`gotify.podlab.tech`)"
+  - "traefik.http.routers.gotify-secure.tls=true"
+  - "traefik.http.routers.gotify-secure.service=gotify"
+  - "traefik.http.services.gotify.loadbalancer.server.port=80"
+  - "traefik.docker.network=proxy"
 ```
