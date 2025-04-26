@@ -20,6 +20,7 @@ e.g
 #### If using Traefik. Update your labels to use your domain details.
 
 gotify port 80
+
 igotify port 8080
 
 e.g Labels
