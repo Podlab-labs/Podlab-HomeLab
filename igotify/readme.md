@@ -6,6 +6,15 @@ Github Link below:
 
 https://github.com/androidseb25/iGotify-Notification-Assistent
 
-#### Update you data/volume paths to your to your liking
+#### Update your data/volume paths to your own path details
+
+e.g
+
+```markdown
+/home/ubuntu/docker/igotify/data
+```
+```markdown
+/home/ubuntu/docker/igotify/api-data
+```
 
 #### If using Traefik. Update your labels to use your domain details.
