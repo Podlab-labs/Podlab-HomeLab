@@ -5,3 +5,7 @@
 Github Link below:
 
 https://github.com/androidseb25/iGotify-Notification-Assistent
+
+#### Update you data/volume paths to your to your liking
+
+#### If using Traefik. Update your labels to use your domain details.
