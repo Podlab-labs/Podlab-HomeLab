@@ -6,6 +6,7 @@ services:
     # Pass in your config file below, by specifying the path on your host machine
     volumes:
       - /home/josh/docker/dashy/public/conf.yml:/app/user-data/conf.yml
+      - /home/josh/docker/dashy/icons:/app/public/item-icons/icons
     ports:
       - 8000:8080
     environment:
