@@ -15,11 +15,11 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.gotify.entrypoints=http"
-      - "traefik.http.routers.gotify.rule=Host(`gotify.podlab.tech`)"
+      - "traefik.http.routers.gotify.rule=Host(`gotify.yourdomain.com`)"
       - "traefik.http.middlewares.gotify-https-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.gotify.middlewares=gotify-https-redirect"
       - "traefik.http.routers.gotify-secure.entrypoints=https"
-      - "traefik.http.routers.gotify-secure.rule=Host(`gotify.podlab.tech`)"
+      - "traefik.http.routers.gotify-secure.rule=Host(`gotify.yourdomain.com`)"
       - "traefik.http.routers.gotify-secure.tls=true"
       - "traefik.http.routers.gotify-secure.service=gotify"
       - "traefik.http.services.gotify.loadbalancer.server.port=80"
@@ -38,18 +38,18 @@ services:
       - /home/josh/docker/igotify/api-data:/app/data
       
     environment:                 # option environment see above note
-      - GOTIFY_URLS=https://gotify.podlab.tech    
+      - GOTIFY_URLS=https://gotify.yourdomain.com    
       - GOTIFY_CLIENT_TOKENS=${GOTIFY_CLIENT_TOKENS}
     #  SECNTFY_TOKENS:       ''
     
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.igotify.entrypoints=http"
-      - "traefik.http.routers.igotify.rule=Host(`igotify.podlab.tech`)"
+      - "traefik.http.routers.igotify.rule=Host(`igotify.yourdomain.com`)"
       - "traefik.http.middlewares.igotify-https-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.igotify.middlewares=igotify-https-redirect"
       - "traefik.http.routers.igotify-secure.entrypoints=https"
-      - "traefik.http.routers.igotify-secure.rule=Host(`igotify.podlab.tech`)"
+      - "traefik.http.routers.igotify-secure.rule=Host(`igotify.yourdomain.com`)"
       - "traefik.http.routers.igotify-secure.tls=true"
       - "traefik.http.routers.igotify-secure.service=igotify"
       - "traefik.http.services.igotify.loadbalancer.server.port=8080"
