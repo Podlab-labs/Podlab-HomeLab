@@ -8,7 +8,7 @@ services:
     security_opt:
       - no-new-privileges:true
     volumes:
-      - /home/josh/docker/igotify/data:/app/data
+      - /home/user/docker/igotify/data:/app/data
     environment:
       - GOTIFY_DEFAULTUSER_PASS=${GOTIFY_DEFAULTUSER_PASS}   # Change me!!!!!
       - GOTIFY_REGISTRATION=false
@@ -35,7 +35,7 @@ services:
       - no-new-privileges:true
     pull_policy: always
     volumes:
-      - /home/josh/docker/igotify/api-data:/app/data
+      - /home/user/docker/igotify/api-data:/app/data
       
     environment:                 # option environment see above note
       - GOTIFY_URLS=https://gotify.yourdomain.com    
