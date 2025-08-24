@@ -18,7 +18,7 @@ services:
       - "traefik.http.services.beszel.loadbalancer.server.port=8090"
       - "traefik.docker.network=proxy"
     volumes:
-      - /home/josh/docker/beszel/beszel_data:/beszel_data
+      - /home/user/docker/beszel/beszel_data:/beszel_data
 
 networks:
   proxy:
