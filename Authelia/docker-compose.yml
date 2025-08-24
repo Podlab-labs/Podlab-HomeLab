@@ -1,0 +1,34 @@
+---
+services:
+  authelia:
+    image: authelia/authelia
+    container_name: authelia
+    volumes:
+      - /home/user/docker/authelia/config:/config
+    networks: # Use this to add Authelia to a docker network
+      - proxy
+    ports:
+      - 9095:9091
+    restart: unless-stopped
+    environment:
+      - TZ=Australia/Sydney
+    healthcheck:
+      disable: true
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    volumes:
+      - /home/user/docker/authelia/redis:/data
+    networks:
+      - proxy
+    expose:
+      - 6379
+    restart: unless-stopped
+    environment:
+      - TZ=Australia/Sydney
+
+
+networks: # Use this to add Authelia to a docker network
+  proxy:
+    external: true

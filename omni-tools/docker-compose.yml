@@ -4,7 +4,7 @@ services:
     container_name: omni-tools
     restart: unless-stopped
     #ports:
-    #  - "8080:80"  # Uncomment if not using traefik labels
+    #  - "8080:80" # Uncomment if not using traefik labels
     networks:
       - proxy
     labels:

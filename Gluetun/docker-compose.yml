@@ -1,0 +1,15 @@
+version: "3"
+services:
+  gluetun:
+    image: qmcgaw/gluetun
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - /home/podlab/docker/gluetun:/gluetun
+    environment:
+      - VPN_SERVICE_PROVIDER=nordvpn
+      - VPN_TYPE=openvpn
+      - OPENVPN_USER=username # Nord Username
+      - OPENVPN_PASSWORD=password
+      #- WIREGUARD_PRIVATE_KEY= #supplied by NordVPN in your account
+      - SERVER_COUNTRIES=United States # Choose your required country

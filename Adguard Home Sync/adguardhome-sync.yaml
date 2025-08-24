@@ -1,0 +1,30 @@
+# cron expression to run in daemon mode. (default; "" = runs only once)
+cron: "*/5 * * * *"
+
+# runs the synchronisation on startup
+runOnStart: true
+
+origin:
+  # url of the origin instance
+  url: http://192.168.1.6  #ip address of adguard server
+  # apiPath: define an api path if other than "/control"
+  # insecureSkipVerify: true # disable tls check
+  username: (Username)
+  password: (Password)
+  # cookie: Origin-Cookie-Name=CCCOOOKKKIIIEEE
+
+# replica instance (optional, if only one)
+replica:
+  # url of the replica instance
+  url: http://192.168.1.42 #ip address of adguard server
+  username: (Username)
+  password: (Password)
+  # cookie: Replica-Cookie-Name=CCCOOOKKKIIIEEE
+
+# Configure the sync API server, disabled if api port is 0
+api:
+  # Port, default 8080
+  port: 8085
+  # if username and password are defined, basic auth is applied to the sync API
+  username: username
+  password: password

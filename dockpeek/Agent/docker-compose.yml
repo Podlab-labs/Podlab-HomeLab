@@ -1,0 +1,20 @@
+### Don't change anything here. Just deploy it as it is on the node/server you want to monitor
+services:
+  dockpeek-socket-proxy:
+    image: lscr.io/linuxserver/socket-proxy:latest
+    container_name: dockpeek-socket-proxy
+    environment:
+      - CONTAINERS=1 
+      - IMAGES=1     
+      - PING=1       
+      - VERSION=1    
+      - INFO=1
+      - POST=1       # <-- This is needed for "Check for updates" operations
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    read_only: true
+    tmpfs:
+      - /run
+    ports:
+      - "2375:2375"
+    restart: unless-stopped

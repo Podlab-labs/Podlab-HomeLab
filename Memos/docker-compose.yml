@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  memos:
+    container_name: memos
+    ports:
+      - 5230:5230
+    volumes:
+      - /home/ubuntu/docker/memos:/var/opt/memos
+    image: neosmemo/memos:0.21.0 # At present time 0.22.0 is broken. Not to use latest tag as yet. 0.21.0 is working. Moe Memos.
+networks: {}

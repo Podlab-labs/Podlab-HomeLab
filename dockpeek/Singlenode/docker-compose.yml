@@ -1,0 +1,13 @@
+services:
+  dockpeek:
+    container_name: dockpeek
+    image: ghcr.io/dockpeek/dockpeek:latest
+    environment:
+      - SECRET_KEY=my_secret_key #change this
+      - USERNAME=admin #change this
+      - PASSWORD=admin #change this
+    ports:
+      - "3420:8000" #change 3420 as necessary for your setup. do not change 8000.
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock #this is how we connect to the docker-socket.
+    restart: unless-stopped #this is fine.

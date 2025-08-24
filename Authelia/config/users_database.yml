@@ -1,0 +1,14 @@
+users:
+  josh: #username for user 1. change to whatever you'd like
+    displayname: "name" #whatever you want the display name to be
+    password: "$argon2id$v=19$m=1024,t=1,p=8$NXFSOUo4REdQanpoZ0FXNw$eZFb6MoHLG1AGFP98ObKziZn7hgN+Dxabs8688JPdIs" #generated at https://argon2.online/
+    email: email@mail.com #whatever your email address is
+    groups: #enter the groups you want the user to be part of below
+      - admins
+      - dev
+  britt: #username for user 2. change to whatever you'd like
+    displayname: "Na,e" #whatever you want the display name to be
+    password: "$argon2id$v=19$m=65536,t=3,p=4$er8NSYgBUMewvZAnzHa6iA$XUPllD02UhywFZAx0svrgu4yMu1UiTdNsVuI60Mvlrg"
+    email: email@mail.com #whatever your email address is
+    groups: #enter the groups you want the user to be part of below
+      - users

@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  adguardhome-sync:
+    container_name: adguardhome-sync
+    ports:
+      - 8085:8080
+    volumes:
+      - /home/ubuntu/docker/adguardhome-sync/adguardhome-sync.yaml:/config/adguardhome-sync.yaml #path to your adguard-sync.yaml file
+    restart: unless-stopped
+    image: ghcr.io/bakito/adguardhome-sync:latest
+networks: {}
