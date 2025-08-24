@@ -1,3 +1,3 @@
 # Beszel Container Resource Manager
 
-#### Docker compose using Traefik Reverse Proxy
+#### Docker compose with Traefik Reverse Proxy labels
